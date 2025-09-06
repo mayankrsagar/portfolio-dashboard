@@ -1,0 +1,39 @@
+[
+  {
+    "sector": "Financials",
+    "stocks": [
+      {
+        "name": "HDFC Bank",
+        "purchasePrice": 1490,
+        "qty": 50,
+        "nseCode": "HDFCBANK",
+        "cmp": 1700.15,
+        "pe": 18.69,
+        "latestEarnings": 91.02
+      },
+      {
+        "name": "Bajaj Finance",
+        "purchasePrice": 6466,
+        "qty": 15,
+        "nseCode": "BAJFINANCE",
+        "cmp": 8419.6,
+        "pe": 32.63,
+        "latestEarnings": 257.8
+      }
+    ]
+  },
+  {
+    "sector": "Technology",
+    "stocks": [
+      {
+        "name": "Affle India",
+        "purchasePrice": 1151,
+        "qty": 50,
+        "nseCode": "AFFLE",
+        "cmp": 1459.6,
+        "pe": 55.53,
+        "latestEarnings": 26.11
+      }
+    ]
+  }
+]
