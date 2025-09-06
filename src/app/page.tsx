@@ -1,4 +1,5 @@
-import PortfolioTable from "@/components/PortfolioTable";
+// import SectorGroup from '@/components/SectorGroup';
+import SectorGroup from "@/components/SectorGroup";
 import { Sector } from "@/types";
 
 async function getPortfolio(): Promise<Sector[]> {
@@ -14,14 +15,11 @@ async function getPortfolio(): Promise<Sector[]> {
 
 export default async function Home() {
   const sectors = await getPortfolio();
-  const flatStocks = sectors.flatMap((s) =>
-    s.stocks.map((st) => ({ ...st, sector: s.sector }))
-  );
 
   return (
     <main className="p-4 max-w-6xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Portfolio Dashboard</h1>
-      <PortfolioTable data={flatStocks} />
+      <SectorGroup sectors={sectors} />
     </main>
   );
 }
