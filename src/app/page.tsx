@@ -1,5 +1,4 @@
-// import SectorGroup from '@/components/SectorGroup';
-import SectorGroup from "@/components/SectorGroup";
+import DashboardClient from "@/components/DashboardClient";
 import { Sector } from "@/types";
 
 async function getPortfolio(): Promise<Sector[]> {
@@ -14,12 +13,12 @@ async function getPortfolio(): Promise<Sector[]> {
 }
 
 export default async function Home() {
-  const sectors = await getPortfolio();
+  const initial = await getPortfolio();
 
   return (
     <main className="p-4 max-w-6xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Portfolio Dashboard</h1>
-      <SectorGroup sectors={sectors} />
+      <DashboardClient initial={initial} />
     </main>
   );
 }
